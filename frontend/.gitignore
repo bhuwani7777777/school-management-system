@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
@@ -22,20 +21,3 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-=======
-# Node
-node_modules/
-build/
-.env
-npm-debug.log
-
-# .NET
-bin/
-obj/
-*.user
-*.suo
-*.DS_Store
-
-# VS Code
-.vscode/
->>>>>>> be7e1f896a612c82240e47ca8bf5ae0374cd2931
