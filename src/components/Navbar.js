@@ -1,56 +1,41 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import logo from "../assets/logo.png";
+import "./Navbar.css";
 
 const Navbar = () => {
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-primary sticky-top shadow">
-      <div className="container">
-        {/* Logo / School Name */}
-        <Link className="navbar-brand fw-bold" to="/">
-          Golden Sunrise School
-        </Link>
+    <nav className="gs-navbar">
+      <div className="gs-container">
 
-        {/* Mobile Toggle */}
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span className="navbar-toggler-icon"></span>
-        </button>
+        {/* Logo */}
+        <NavLink to="/" className="gs-logo">
+          <img src={logo} alt="Golden Sunrise School" />
+          <span>Golden Sunrise</span>
+        </NavLink>
 
-        {/* Menu Items */}
-        <div className="collapse navbar-collapse" id="navbarNav">
-          <ul className="navbar-nav ms-auto text-center">
-            <li className="nav-item">
-              <Link className="nav-link" to="/">Home</Link>
-            </li>
+        {/* Menu */}
+        <ul className="gs-menu">
+          <li><NavLink to="/" end>Home</NavLink></li>
+          <li><NavLink to="/about">About</NavLink></li>
 
-            <li className="nav-item">
-              <Link className="nav-link" to="/about">About Us</Link>
-            </li>
+          {/* Dropdown */}
+          <li className="gs-dropdown">
+            <span>Academics ▾</span>
+            <ul className="gs-dropdown-menu">
+              <li><NavLink to="/teachers">Teachers</NavLink></li>
+              <li><NavLink to="/achievements">Achievements</NavLink></li>
+              <li><NavLink to="/gallery">Gallery</NavLink></li>
+            </ul>
+          </li>
 
-            <li className="nav-item">
-              <Link className="nav-link" to="/teachers">Teachers</Link>
-            </li>
+          <li><NavLink to="/admissions" className="gs-admission-btn">
+            Admissions
+          </NavLink></li>
 
-            <li className="nav-item">
-              <Link className="nav-link" to="/achievements">Achievements</Link>
-            </li>
+          <li><NavLink to="/contact">Contact</NavLink></li>
+        </ul>
 
-            <li className="nav-item">
-              <Link className="nav-link" to="/gallery">Gallery</Link>
-            </li>
-
-            <li className="nav-item">
-              <Link className="nav-link" to="/contact">Contact</Link>
-            </li>
-          </ul>
-        </div>
       </div>
     </nav>
   );

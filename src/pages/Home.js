@@ -1,54 +1,41 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import heroImage from "../assets/hero-school.jpg";
+
 
 const Home = () => {
   return (
     <div>
       {/* HERO SECTION */}
-      <section className="bg-dark text-white text-center py-5">
-        <div className="container">
-          <h1 className="fw-bold display-5">
-            Golden Sunrise Secondary English School
-          </h1>
-          <p className="lead mt-3">
-            Gauradaha, Jhapa, Nepal <br />
-            Shaping Future Leaders with Quality Education
-          </p>
-          <div className="mt-4">
-            <Link to="/about" className="btn btn-warning me-3">
-              Learn More
-            </Link>
-            <Link to="/contact" className="btn btn-outline-light">
-              Contact Us
-            </Link>
-          </div>
-        </div>
-      </section>
+<section
+  className="text-white text-center d-flex align-items-center"
+  style={{
+    minHeight: "90vh",
+    backgroundImage: `linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(${heroImage})`,
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+  }}
+>
+  <div className="container">
+    <h1 className="fw-bold display-4">
+      Golden Sunrise Secondary English School
+    </h1>
+    <p className="lead mt-3">
+      Gauradaha, Jhapa, Nepal <br />
+      Shaping Future Leaders with Quality Education
+    </p>
+    <div className="mt-4">
+      <Link to="/about" className="btn btn-warning btn-lg me-3">
+        Learn More
+      </Link>
+      <Link to="/contact" className="btn btn-outline-light btn-lg">
+        Contact Us
+      </Link>
+    </div>
+  </div>
+</section>
 
-      {/* ABOUT SUMMARY */}
-      <section className="container my-5">
-        <div className="row align-items-center">
-          <div className="col-md-6">
-            <h2 className="fw-bold">Welcome to Golden Sunrise</h2>
-            <p className="text-muted mt-3">
-              Golden Sunrise Secondary English School is committed to providing
-              quality education in a safe, disciplined, and friendly
-              environment. We focus on academic excellence, moral values, and
-              overall personality development of students.
-            </p>
-            <Link to="/about" className="btn btn-primary mt-2">
-              Read More
-            </Link>
-          </div>
-          <div className="col-md-6">
-            <img
-              src="https://images.unsplash.com/photo-1509062522246-3755977927d7"
-              alt="School"
-              className="img-fluid rounded shadow"
-            />
-          </div>
-        </div>
-      </section>
+
 
       {/* WHY CHOOSE US */}
       <section className="bg-light py-5">
